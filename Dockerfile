@@ -1,4 +1,3 @@
-rm -rf address
 mkdir -m 777 address
 cd newdock
 cp /var/lib/jenkins/workspace/pipe/target/addressbook.war .
