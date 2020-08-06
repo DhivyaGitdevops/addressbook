@@ -8,5 +8,5 @@ Run cd apache-tomcat-10.0.0-M7
 run cd bin/
 CMD catalina.sh
 expose 8080
-sudo docker build -t newcent:newcent .
-sudo docker run -itd --name newcon newcent:newcent /bin/bash
+docker build -t newcent:newcent .
+docker run -itd --name newcon newcent:newcent /bin/bash
