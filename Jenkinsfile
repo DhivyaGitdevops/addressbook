@@ -6,8 +6,13 @@ pipeline {
     stages {
         stage('deploy') {
             steps {
-                sh "docker build -t cent1:cent1 /var/lib/jenkins/workspace/pipe/Dockerfile"
-                sh "docker run -itd --name cont2 cent1:cent1 /bin/bash"
+              DOCKER_HOME = tool "docker"
+    sh """
+        echo $DOCKER_HOME
+        ls $DOCKER_HOME/bin/
+        $DOCKER_HOME/bin/docker images
+        $DOCKER_HOME/bin/docker ps -a
+    """
             
             }
         }
